@@ -1,0 +1,74 @@
+#books {
+    margin: auto;
+    width: 75%;
+    padding: 15px;
+}
+.bookContainer {
+    width: 350px;
+    padding: 20px;
+}
+.bookContainer img {
+    margin: 10px;
+    width: 200px;
+    height: 300px;
+}
+
+.bookContainer ul {
+    list-style-type: none;
+    margin-bottom: 0;
+    padding: 7px;
+}
+.bookContainer button {
+    margin: 10px;
+}
+
+form {
+    text-align: center;
+}
+
+#addBook label {
+    width: 100px;
+    margin-right: 10px;
+    text-align: right;
+    line-height: 25px;
+}
+
+#addBook label[for="title"], #addBook label[for="releaseDate"] {
+    clear: both;
+}
+#addBook button {
+    display: block;
+    margin: 5px 20px 10px 10px;
+    float: right;
+    clear: both;
+}
+#addBook div {
+    width: 550px;
+    margin: auto;
+}
+#addBook div:after {
+    content: "";
+    display: block;
+    height: 0;
+    visibility: hidden;
+    clear: both;
+    font-size: 0;
+    line-height: 0;
+}
+
+#drop-file {
+    width: 100%;
+    margin: auto;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 250px 250px 250px 250px;
+    grid-gap: 30px;
+    background-color: #fff;
+    color: #444;
+}
+
+/*.box {*/
+    /**/
+/*}*/

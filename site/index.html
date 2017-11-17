@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Backbone.js Library</title>
+    <link rel="stylesheet" href="css/screen.css">
+    <link rel="stylesheet" href="css/uikit.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.35/js/uikit.min.js"></script>
+    <script src="js/lib/uikit-icons.min.js"></script>
+</head>
+<body>
+<div id="books">
+    <form id="addBook" action="#" class="uk-form">
+        <fieldset class="uk-fieldset">
+            <legend class="uk-legend"><h3>Add a Book</h3></legend><br /><br />
+                    <div class="js-upload uk-placeholder uk-text-center" id="drop-file">
+                        <span uk-icon="icon: cloud-upload"></span>
+                        <span class="uk-text-middle">Attach binaries by dropping them here or</span>
+                        <div uk-form-custom>
+                            <input type="file" id="coverImage">
+                            <span class="uk-link">selecting one</span>
+                        </div>
+                    </div><br /><br />
+                    <div>
+                        <input id="title" type="text" class="uk-input" placeholder="title"/><br /><br />
+                    </div>
+                    <div>
+                        <input id="author" type="text" class="uk-input" placeholder="author"/><br /><br />
+                    </div>
+                    <div>
+                        <input id="releaseDate" type="text" class="uk-input" placeholder="Release Date"/><br /><br />
+                    </div>
+                    <div>
+                        <input id="keywords" type="text" class="uk-input" placeholder="Keywords..."/><br /><br />
+                    </div>
+                    <div>
+                        <button id="add" class="uk-button uk-button-secondary">Add</button>
+                    </div>
+        </fieldset>
+    </form>
+    <hr />
+    <div class="wrapper" id="books-list"></div>
+    <!--<div class="bookContainer">-->
+        <!--<img src="img/placeholder.jpg" width="200"/>-->
+        <!--<ul>-->
+            <!--<li>Title</li>-->
+            <!--<li>Author</li>-->
+            <!--<li>Release Date</li>-->
+            <!--<li>Keywords</li>-->
+        <!--</ul>-->
+        <!--<button class="uk-button uk-button-danger delete">Delete</button>-->
+    <!--</div>-->
+</div>
+<script id="bookTemplate" type="text/template">
+        <div>
+            <img src="<%= coverImage %>"/>
+        </div>
+        <div>
+            <ul>
+                <li><%= title %></li>
+                <li><%= author %></li>
+                <li><%= releaseDate %></li>
+                <li><%= keywords %></li>
+            </ul>
+            <button class="uk-button uk-button-danger delete">Delete</button>
+        </div>
+</script>
+<script src="js/lib/jquery-3.2.1.min.js"></script>
+<script src="js/lib/underscore.js"></script>
+<script src="js/lib/backbone.js"></script>
+<script src="js/models/book.js"></script>
+<script src="js/collections/library.js"></script>
+<script src="js/views/book.js"></script>
+<script src="js/views/library.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
